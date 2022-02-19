@@ -1,0 +1,17 @@
+.hover-button{
+  border-radius: 40px;
+  transition: box-shadow 0.5s ease-in-out;
+  padding: 20px;
+  background-color: white;
+}
+.hover-button:hover{
+  box-shadow: 1px 1px 3px 1px grey;
+}
+#Title{
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+}
+#Title2{
+  text-align: center;
+  font-family: 'Nunito Sans', sans-serif;
+}

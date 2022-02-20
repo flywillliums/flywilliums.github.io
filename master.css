@@ -1,8 +1,11 @@
 .hover-button{
-  border-radius: 40px;
-  transition: box-shadow 0.5s ease-in-out;
-  padding: 20px;
-  background-color: white;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease-in-out;
+  padding: 5px;
+  border: none;
+  background-color: #D4145A;
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
 }
 .hover-button:hover{
   box-shadow: 1px 1px 3px 1px grey;
@@ -11,7 +14,49 @@
   text-align: center;
   font-family: 'Nunito Sans', sans-serif;
 }
-#Title2{
-  text-align: center;
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+ul {
+  list-style-type: circle;
+  background: white;
+  color: #D4145A;
+  margin: 5px;
+  padding: 5px;
+}
+hr{
+  width: 100%;
+  border-radius: 10px;
+  border: 5px solid black;
+}
+p{
   font-family: 'Nunito Sans', sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #D4145A;
+  color: white;
 }

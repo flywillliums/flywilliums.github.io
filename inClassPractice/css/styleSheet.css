@@ -1,18 +1,34 @@
-p {
-  color: red;
-  text-align: center;
-  background-color: inherit;
+div{
+  display: flex;
+  flex-flow: row wrap;
+  background-color: green;
+  padding: 30px;
 }
-h1 {
-font-style: italic;
-font-family: futura,sans-serif;
+
+p{
+  background-color: white;
+  padding: 5px;
+  margin: 5px;
 }
-#test01{
-  color: purple;
+
+@media screen and (max-width: 600px){
+  div{
+    display: flex;
+    flex-grow: 10;
+    background-color: white;
+    padding: 30px;
+  }
+  p{
+    background-color: green;
+  }
 }
-.test{
-  text-shadow: 2px 8px grey;
-}
-a:hover{
-  color: red;
+
+@media screen and (min-width: 1000px){
+  div{
+    background-color: brown;
+    padding: 30px;
+  }
+  p{
+    background-color: black;
+  }
 }

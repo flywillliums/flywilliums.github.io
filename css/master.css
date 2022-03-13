@@ -1,4 +1,13 @@
 @media screen and (min-width: 400px){
+  .container{
+    display: flex;
+  }
+  .item{
+
+  }
+  .smallimg{
+    width: 20px
+  }
   p{
     font-size: 25px;
   }
@@ -20,7 +29,7 @@
     font-size: 65px
   }
   .center{
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     width: 25%;

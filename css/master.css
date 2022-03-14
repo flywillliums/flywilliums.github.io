@@ -1,12 +1,14 @@
 @media screen and (min-width: 400px){
   .container{
     display: flex;
+    align-items: stretch;
+    grid-gap: 0px;
   }
   .item{
-
+    flex-grow: 1;
   }
   .smallimg{
-    width: 20px
+    width: 20px;
   }
   p{
     font-size: 25px;
@@ -49,11 +51,20 @@
   p{
     font-family: 'Nunito Sans', sans-serif;
   }
-  .topnav{
+  .musicpara{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: #D4145A;
+    width: 25%;
+    text-align: center;
+    justify-content: center;
+  }
+  #topnav{
     overflow: hidden;
     background-color: black;
   }
-  .topnav a{
+  #topnav a{
     float: left;
     color: #f2f2f2;
     text-align: center;
@@ -62,16 +73,27 @@
     font-family: 'Nunito Sans', sans-serif;
     font-size: 17px;
   }
-  .topnav a:hover{
+  #topnav a:hover{
     background-color: #ddd;
     color: black;
   }
-  .topnav a.active{
+  #topnav a.active{
     background-color: #D4145A;
     color: white;
   }
 }
 @media screen and (max-width: 400px){
+  .container{
+    display: flex;
+    align-items: stretch;
+    grid-gap: 0px;
+  }
+  .item{
+    flex-grow: 1;
+  }
+  .smallimg{
+    width: 20px;
+  }
   .hover-button{
     border-radius: 8px;
     transition: box-shadow 0.2s ease-in-out;
@@ -93,7 +115,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
+    width: 40%;
   }
   ul{
     list-style-type: circle;
@@ -110,25 +132,34 @@
   p{
     font-family: 'Nunito Sans', sans-serif;
   }
-  .topnav{
+  #topnav{
     overflow: hidden;
     background-color: black;
   }
-  .topnav a{
+  #topnav a{
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 12px;
     text-decoration: none;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 17px;
+    font-size: 10px;
   }
-  .topnav a:hover{
+  #topnav a:hover{
     background-color: #ddd;
     color: black;
   }
-  .topnav a.active{
+  #topnav a.active{
     background-color: #D4145A;
     color: white;
+  }
+  .musicpara{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: #D4145A;
+    width: 0;
+    text-align: center;
+    justify-content: center;
   }
 }

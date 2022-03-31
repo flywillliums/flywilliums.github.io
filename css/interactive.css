@@ -1,0 +1,9 @@
+button{
+  transition: all 1000ms ease-in-out;
+  font-size: 40px;
+}
+
+.was-clicked{
+  padding-left: 20px;
+  color: rebeccapurple;
+}

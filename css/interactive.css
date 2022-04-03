@@ -7,3 +7,12 @@ button{
   padding-left: 20px;
   color: rebeccapurple;
 }
+
+h1{
+  transition: all 1000ms ease-in-out;
+  font-size: 40px;
+}
+
+.hovered{
+  font-size: 100px;
+} 

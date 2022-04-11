@@ -6,19 +6,18 @@ async function buttonClicked(){
             throw Error(response.statusText);
         }
         const json = await response.json();
-        console.log(json.quote);
-        displayQuote(json.quote);
+        displayPicture(json.url);
     } catch(err){
         console.log(err);
         alert;
     }
 }
 
-function displayQuote(quotes){
+function displayPicture(quotes){
     const quoteText = document.getElementById('js-quote-text')
-    quoteText.textcontent = quotes;
+    quoteText.innerHTML = quotes;
 }
 
 const quoteButton = document.querySelector('#js-new-quote')
 quoteButton.addEventListener('click', buttonClicked);  
-const link = 'http://quotes.stormconsultancy.co.uk/random.json'
+const link = 'https://100k-faces.glitch.me/random-image-url'

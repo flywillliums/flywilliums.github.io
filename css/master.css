@@ -1,4 +1,16 @@
 @media screen and (min-width: 400px){
+  .randomize{
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease-in-out;
+    padding: 5px;
+    border: none;
+    background-color: #D4145A;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  .randomize:hover{
+    box-shadow: 1px 1px 3px 1px grey;
+  }
   .container{
     display: flex;
     align-items: stretch;

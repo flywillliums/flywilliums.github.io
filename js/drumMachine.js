@@ -13,6 +13,9 @@
 				case 72:
 					playHat();
 					break;
+				case 74:
+					playOpenHat();
+					break;
 			}
 		}
 
@@ -35,6 +38,13 @@
 			const hat = document.querySelector("#hat");	
 			hat.currentTime=0;
 			hat.play();
+		}
+
+		const playOpenHat = c => {
+			play("#openHatButton");
+			const openHat = document.querySelector("#openHat");	
+			openHat.currentTime=0;
+			openHat.play();
 		}
 
 		function play(drumId) {

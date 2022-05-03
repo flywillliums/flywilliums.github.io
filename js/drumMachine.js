@@ -1,67 +1,52 @@
-
-
-{
-	const playingClass = 'playing',
-		crashRide = document.getElementById('crash-ride'),
-		hiHatTop = document.getElementById('hihat-top');
-
-	const animateCrashOrRide = () => {
-		crashRide.style.transform = 'rotate(0deg) scale(1.5)';
-	};
-
-	const animateHiHatClosed = () => {
-		hiHatTop.style.top = '171px';
-	};
-
-	const playSound = e => {
-		const keyCode = e.keyCode,
-			keyElement = document.querySelector(`div[data-key="${keyCode}"]`);
-
-		if(!keyElement) return;
-
-		const audioElement = document.querySelector(`audio[data-key="${keyCode}"]`);
-		audioElement.currentTime = 0;
-		audioElement.play();
-
-		switch(keyCode) {
-			case 69:
-			case 82:
-				animateCrashOrRide();
-				break;
-			case 75:
-				animateHiHatClosed();
-				break;
+ 		const playSound = e => {
+			console.log("keypressed")
+			const keyCode = e.keyCode,
+				keyElement = document.querySelector(`div[data-key="${keyCode}"]`);
+			console.log(keyCode)
+			switch(keyCode){
+				case 70:
+					playKick();
+					break;
+				case 71:
+					playSnare();
+					break;
+				case 72:
+					playHat();
+					break;
+			}
 		}
 
-		keyElement.classList.add(playingClass);
-	};
+		const playSnare = a => {
+			play("#snareButton");
+			const snare = document.querySelector("#snare");	
+			snare.currentTime=0;
+			snare.play();
+		}
 
-	const removeCrashRideTransition = e => {
-		if(e.propertyName !== 'transform') return;
+		const playKick = b => {
+			play("#kickButton");
+			const kick = document.querySelector("#kick");
+			kick.currentTime=0;
+			kick.play();
+		}
 
-		e.target.style.transform = 'rotate(-7.2deg) scale(1.5)';
-	};
+		const playHat = c => {
+			play("#hatButton");
+			const hat = document.querySelector("#hat");	
+			hat.currentTime=0;
+			hat.play();
+		}
 
-	const removeHiHatTopTransition = e => {
-		if(e.propertyName !== 'top') return;
+		function play(drumId) {
+			console.log("runningplay")
+			document.querySelector(drumId).className= "drumButton";
+			window.requestAnimationFrame(function(time) {
+			  window.requestAnimationFrame(function(time) {
+				document.querySelector(drumId).className = "drumButton animation";
+			  });
+			});
+		  }
 
-		e.target.style.top = '166px';
-	};	
 
-	const removeKeyTransition = e => {
-		if(e.propertyName !== 'transform') return;
-
-		e.target.classList.remove(playingClass)
-	};
-
-	const drumKeys = Array.from(document.querySelectorAll('.key'));
-
-	drumKeys.forEach(key => {
-		key.addEventListener('transitionend', removeKeyTransition);
-	});
-
-	crashRide.addEventListener('transitionend', removeCrashRideTransition);
-	hiHatTop.addEventListener('transitionend', removeHiHatTopTransition);
-
-	window.addEventListener('keydown', playSound);
-}
+		window.addEventListener('keydown', playSound);
+	

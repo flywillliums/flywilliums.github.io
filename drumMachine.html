@@ -6,25 +6,30 @@
     <link rel="stylesheet" href="css/master.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,900;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="js/drumMachine.js"></script>
   </head>
     <body>
       <div class="container">
         <img src="img/foodtubeAsset3.png" alt="logo" width="50" height="50">
         <div id="topnav" class = "item">
-          <a class="active" href="index.html">Home</a>
+          <a href="index.html">Home</a>
           <a href="musicPage.html">Music</a>
           <a href="githubPage.html">Contact</a>
           <a href="resumePage.html">Resume/Portfolio</a>
+          <a class="active" href="drumMachine.html">Drum Machine</a>
         </div>
       </div>
       <div class="center">
         <menu class="drumMenu">
-          <li class="drumLi"><button class="drumButton">kick</button></li>
-          <li class="drumLi"><button class="drumButton">snare</button></li>
-          <li class="drumLi"><button class="drumButton">hat</button></li>
+          <li class="drumLi"><button class="drumButton" id="kickButton">kick</button></li>
+          <li class="drumLi" ><button class="drumButton" id="snareButton">snare</button></li>
+          <li class="drumLi"><button class="drumButton" id="hatButton">hat</button></li>
         </menu>
       </div>
+      <h1 id="Title">F: Kick G: Snare H: Hat</h1>
     </body>
-  </html>
+    <audio id="hat" src="audio/hat.wav"></audio>
+    <audio id="kick" src="audio/kick.wav"></audio>
+    <audio id="snare" src="audio/snare.wav"></audio>
+</html>

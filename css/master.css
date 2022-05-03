@@ -9,19 +9,22 @@
     padding: 10px;
     text-align: center;
     display: block;
+    width: auto;
   }
   .drumMenu{
     display: flex;
     list-style: none;
     padding: 10px;
     width: auto;
+    flex-wrap: wrap;
   }
   .drumLi{
     flex-grow: 1;
     padding: 5%;
+    width: auto;
   }
   .drumButton {
-    width: 100%;
+    width:auto;
     border-radius: 8px;
     transition: box-shadow 0.2s ease-in-out;
     padding: 100px;
@@ -34,15 +37,15 @@
     animation: anim 1s;
   }
   @keyframes anim {
-    0%{ 
-      transform:rotate(10deg); 
-    } 
-    50%{ 
-      transform:rotate(-20deg); 
-    } 
-    10%{ 
-      transform:rotate(20deg); 
-    } 
+    0%{
+      transform:rotate(10deg);
+    }
+    50%{
+      transform:rotate(-20deg);
+    }
+    10%{
+      transform:rotate(20deg);
+    }
   }
   .randomize{
     border-radius: 8px;
@@ -205,7 +208,7 @@
     padding: 20px 12px;
     text-decoration: none;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 10px;
+    font-size: 8px;
   }
   #topnav a:hover{
     background-color: #ddd;
@@ -217,11 +220,67 @@
   }
   .musicpara{
     font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
+    font-size: 10px;
     color: white;
     background-color: #D4145A;
-    width: 0;
+    width: 25%;
     text-align: center;
     justify-content: center;
+    padding: 10px;
+  }
+  .img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  .center {
+    padding: 10px;
+    text-align: center;
+    display: block;
+  }
+  .drumMenu{
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    width: auto;
+    flex-wrap: wrap;
+  }
+  .drumLi{
+    flex-grow: 1;
+    padding: 5%;
+  }
+  .drumButton {
+    width: 100%;
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease-in-out;
+    padding: 70px;
+    border: none;
+    background-color: #D4145A;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .animation{
+    animation: anim 1s;
+  }
+  @keyframes anim {
+    0%{
+      transform:rotate(10deg);
+    }
+    50%{
+      transform:rotate(-20deg);
+    }
+    10%{
+      transform:rotate(20deg);
+    }
+  }
+  .musicContainer{
+    display: flex;
+    align-items: stretch;
+    grid-gap: 0px;
+    padding: 0;
+  }
+  .musicItem{
+    flex-grow: 1;
   }
 }
